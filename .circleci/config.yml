@@ -27,7 +27,7 @@ jobs:
       - run: npm run build
 
       - aws-s3/sync:
-          from: build
+          from: dist
           to: "s3://cypress-cci/"
           arguments: |
             --acl public-read \
